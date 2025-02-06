@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "ce6222e9-a233-45a3-a825-e6e7f25a5fe3"
+      }
+    },
+    "android": {
+      "package": "com.shreyas.ramji.spendsmart"
+    },
+    "ios": {
+      "bundleIdentifier": "com.shreyas.ramji.spendsmart",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    }
+  }
+}
