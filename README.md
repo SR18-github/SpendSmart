@@ -5,6 +5,7 @@ SpendSmart is a **React Native** mobile application designed to help users manag
 ---
 
 ## Requirements from FBLA:
+
 Create a program that helps students manage their personal finances by tracking account
 balances, income and expenses. The program should allow users to input details about their
 income sources and expenses, including the amount, category, and date of each transaction.
@@ -14,6 +15,14 @@ spending patterns. Additionally, the program should include functionality to upd
 existing entries and offer search and filter options to easily find specific transactions.
 
 ---
+
+## Team Members
+
+- **Shreyas Ramji**
+- **Santhosh Ilaiyaraja**
+- **Eli Yuhan**
+---
+
 
 ## Features
 
