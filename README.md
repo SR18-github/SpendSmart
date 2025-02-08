@@ -23,9 +23,28 @@ existing entries and offer search and filter options to easily find specific tra
 
 ---
 
+## Technologies Used
+
+- **React Native** - Frontend UI framework.
+- **Expo** - React Native framework for easy development.
+- **SQLite** - Local database storage.
+- **@react-native-picker/picker** - Dropdown picker component.
+- **@react-native-community/datetimepicker** - Date selection.
+- **react-native-chart-kit** - For generating financial graphs.
+---
+
+
 ## Application Architecture
 
 Below is the **high-level architecture** of the application:
+
+
+
+
+
+
+Here is a description of what each Javascript file does:
+
 
 
 
@@ -43,23 +62,26 @@ Below is the **high-level architecture** of the application:
 The application uses an SQLite database to store financial data. Below is the **Entity Relationship Diagram (ERD):**
 
 
-
 ### **Tables:**
 
 - **Transactions** (id, type, amount, category\_id, date, comment)
 - **Categories** (id, name)
-- **Users** (id, name, email)
 
----
+There are 2 types of transactions: 
+1. Income 
+2. Expenses.
 
-## Technologies Used
-
-- **React Native** - Frontend UI framework.
-- **Expo** - React Native framework for easy development.
-- **SQLite** - Local database storage.
-- **@react-native-picker/picker** - Dropdown picker component.
-- **@react-native-community/datetimepicker** - Date selection.
-- **react-native-chart-kit** - For generating financial graphs.
+The App will be pre-loaded with the following ten Expense categories (and more can be added by the use):
+1. Tuition fees
+2. Housing
+3. Food and drinks
+4. Transportation
+5. Books/Stationary
+6. Utilities
+7. Laundry
+8. Entertainment
+9. Personal
+10. Credit card bill 
 
 ---
 
