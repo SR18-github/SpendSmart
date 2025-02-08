@@ -2,7 +2,9 @@
 
 SpendSmart is a **React Native** mobile application designed to help users manage their personal finances efficiently. Users can **track income and expenses**, categorize transactions, and generate insightful financial reports.
 
-Requirements:
+---
+
+## Requirements from FBLA:
 Create a program that helps students manage their personal finances by tracking account
 balances, income and expenses. The program should allow users to input details about their
 income sources and expenses, including the amount, category, and date of each transaction.
@@ -11,10 +13,11 @@ expenses over specified periods (e.g., weekly, monthly), and categorize expenses
 spending patterns. Additionally, the program should include functionality to update or delete
 existing entries and offer search and filter options to easily find specific transactions.
 
+---
 
 ## Features
 
-- **Multi-Platform**: App that can run on iOS or Android devices.
+- **Multi-Platform**: App can run on iOS or Android devices.
 - **Add and Manage Transactions**: Users can add income and expenses with a category, date, and comment.
 - **Transaction History**: View and delete past transactions.
 - **Categorized Reports**: Filter transactions by date, category, or amount.
@@ -30,7 +33,6 @@ existing entries and offer search and filter options to easily find specific tra
 - **SQLite** - Local database storage.
 
 ---
-
 
 ## Application Architecture
 
@@ -59,7 +61,7 @@ Here is a description of what each Javascript file does:
 
 ## Database Schema
 
-The application uses an SQLite database to store financial data. Below is the **Entity Relationship Diagram (ERD):**
+The application uses an SQLite database to store financial data.**
 
 
 ### **Tables:**
@@ -73,7 +75,7 @@ There are 2 types of transactions:
 2. Expenses.
 
 
-The App will be pre-loaded with the following ten Expense categories (and more can be added by the use):
+The App will be pre-loaded with the following ten Expense categories (and more can be added by the user):
 1. Tuition fees
 2. Housing
 3. Food and drinks
