@@ -10,16 +10,23 @@ import IncomeScreen from './screens/Income';
 import ExpensesScreen from './screens/Expenses';
 import ReportsScreen from './screens/Reports';
 
+// Create a bottom tab navigator for app navigation
 const Tab = createBottomTabNavigator();
 
+/**
+ * DatabaseWrapper Component
+ * Wraps all main screens inside a tab navigation system and passes the database instance as a prop.
+ * Ensures that each screen has access to the database for fetching and modifying transaction data.
+ */
 function DatabaseWrapper({ db }) {
     return (
         <Tab.Navigator 
-screenOptions={{
-            tabBarActiveTintColor: '#8743A2',
-            tabBarLabelStyle: { fontWeight: 'bold', textAlign: 'center' },
-          }}        
+            screenOptions={{
+                tabBarActiveTintColor: '#8743A2', // Sets active tab color
+                tabBarLabelStyle: { fontWeight: 'bold', textAlign: 'center' } // Styles tab labels
+            }}        
         >
+            {/* Define tabs for different sections of the app */}
             <Tab.Screen name="Dashboard">
                 {(props) => <DashboardScreen {...props} db={db} />}
             </Tab.Screen>
@@ -40,16 +47,22 @@ screenOptions={{
 }
 
 export default function App() {
+    // State to hold the database instance
     const [db, setDb] = useState(null);
-    const [dbReady, setDbReady] = useState(false);
-    
+    const [dbReady, setDbReady] = useState(false); // Tracks whether the database is ready
+
+    /**
+     * useEffect Hook
+     * Runs once when the app starts to initialize the database.
+     * Calls `loadDatabase()` and `initializeDatabase()` to set up storage.
+     */
     useEffect(() => {
         const init = async () => {
             try {
-                await loadDatabase();    
-                const database = await initializeDatabase();
-                setDb(database);
-                setDbReady(true);
+                await loadDatabase(); // Ensures the database file is available
+                const database = await initializeDatabase(); // Initializes tables and default values
+                setDb(database); // Stores the database instance in state
+                setDbReady(true); // Marks the database as ready
             } catch (error) {
                 console.error('Database initialization failed:', error);
             }
@@ -58,6 +71,10 @@ export default function App() {
         init();
     }, []);
 
+    /**
+     * Displays a loading screen until the database is ready.
+     * Prevents users from interacting with the app before data is initialized.
+     */
     if (!dbReady) {
         return (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -67,9 +84,13 @@ export default function App() {
         );
     }
 
+    /**
+     * Main Application Structure
+     * Wraps the navigation inside the TransactionProvider to provide transaction context globally.
+     */
     return (
-        <TransactionProvider> {}
-            <NavigationContainer>
+        <TransactionProvider> {/* Provides transaction data to all components */}
+            <NavigationContainer> {/* Handles app navigation */}
                 <DatabaseWrapper db={db} />
             </NavigationContainer>
         </TransactionProvider>

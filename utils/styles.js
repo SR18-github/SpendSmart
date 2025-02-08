@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 
+/** Defines CSS styles for the screens **/
 export default StyleSheet.create({
   container: {
     flex: 1,
