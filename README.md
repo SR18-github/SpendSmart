@@ -1,8 +1,6 @@
-# SpendSmart
+# SpendSmart - Personal Finance Manager
 
-
-SpendSmart is an App that is developed for the FBLA Coding and Programming 2024-25 competition.
-
+SpendSmart is a **React Native** mobile application designed to help users manage their personal finances efficiently. Users can **track income and expenses**, categorize transactions, and generate insightful financial reports.
 
 Requirements:
 Create a program that helps students manage their personal finances by tracking account
@@ -14,17 +12,79 @@ spending patterns. Additionally, the program should include functionality to upd
 existing entries and offer search and filter options to easily find specific transactions.
 
 
-How to run:
+## Features
 
-An expo snack has been created with this repo. To run the snack:
+- **Multi-Platform App that can run on iOS or Android devices.
+- **Add and Manage Transactions**: Users can add income and expenses with a category, date, and comment.
+- **Transaction History**: View and delete past transactions.
+- **Categorized Reports**: Filter transactions by date, category, or amount.
+- **Graphical Insights**: Pie charts and reports for better financial understanding.
+- **Persistent Data Storage**: Uses SQLite for offline data storage.
 
-1. Download Expo Go on your iOS or Android mobile device.
+---
 
-2. Copy and paste this URL in a Browser and run it in Expo Go App when prompted:
+## Application Architecture
 
-exp://u.expo.dev/933fd9c0-1666-11e7-afca-d980795c5824?runtime-version=exposdk%3A52.0.0&channel-name=production&snack=%40shreyas.ramji%2Fgithub.com-sr18-github-spendsmart&snack-channel=CVQj6qPUDV
-
-
+Below is the **high-level architecture** of the application:
 
 
+
+### **Overview:**
+
+1. **React Native UI** - User interacts with the mobile app.
+2. **Transaction Context API** - Manages state and transactions.
+3. **Database Module (SQLite)** - Handles database operations.
+4. **Persistent Storage (Expo SQLite)** - Stores transactions and categories permanently.
+
+---
+
+## Database Schema
+
+The application uses an SQLite database to store financial data. Below is the **Entity Relationship Diagram (ERD):**
+
+
+
+### **Tables:**
+
+- **Transactions** (id, type, amount, category\_id, date, comment)
+- **Categories** (id, name)
+- **Users** (id, name, email)
+
+---
+
+## Technologies Used
+
+- **React Native** - Frontend UI framework.
+- **Expo** - React Native framework for easy development.
+- **SQLite** - Local database storage.
+- **@react-native-picker/picker** - Dropdown picker component.
+- **@react-native-community/datetimepicker** - Date selection.
+- **react-native-chart-kit** - For generating financial graphs.
+
+---
+
+## Getting Started
+
+### ** 1. Clone the Repository**
+
+```sh
+$ git clone https://github.com/yourusername/spendsmart.git
+$ cd spendsmart
+```
+
+### ** 2. Install Dependencies**
+
+```sh
+$ npm install
+```
+
+### ** 3. Start the Development Server**
+
+```sh
+$ npx expo start
+```
+
+Install Expo Go App from the AppStore and scan the QR code using **Expo Go** on your mobile device.
+
+---
 
