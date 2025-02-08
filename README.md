@@ -14,7 +14,7 @@ existing entries and offer search and filter options to easily find specific tra
 
 ## Features
 
-- **Multi-Platform App that can run on iOS or Android devices.
+- **Multi-Platform**: App that can run on iOS or Android devices.
 - **Add and Manage Transactions**: Users can add income and expenses with a category, date, and comment.
 - **Transaction History**: View and delete past transactions.
 - **Categorized Reports**: Filter transactions by date, category, or amount.
