@@ -39,13 +39,15 @@ existing entries and offer search and filter options to easily find specific tra
 Below is the **high-level architecture** of the application:
 
 
-
-
+![alt text](https://github.com/SR18-github/SpendSmart/blob/main/images/Architecture.png?raw=true)
 
 
 Here is a description of what each Javascript file does:
 
 
+![alt text](https://github.com/SR18-github/SpendSmart/blob/main/images/JS_Table.png?raw=true)
+
+---
 
 
 ### **Overview:**
@@ -67,9 +69,11 @@ The application uses an SQLite database to store financial data. Below is the **
 - **Transactions** (id, type, amount, category\_id, date, comment)
 - **Categories** (id, name)
 
+
 There are 2 types of transactions: 
 1. Income 
 2. Expenses.
+
 
 The App will be pre-loaded with the following ten Expense categories (and more can be added by the use):
 1. Tuition fees
@@ -90,8 +94,8 @@ The App will be pre-loaded with the following ten Expense categories (and more c
 ### ** 1. Clone the Repository**
 
 ```sh
-$ git clone https://github.com/yourusername/spendsmart.git
-$ cd spendsmart
+$ git clone https://github.com/SR18-github/SpendSmart.git
+$ cd SpendSmart
 ```
 
 ### ** 2. Install Dependencies**
