@@ -28,9 +28,7 @@ existing entries and offer search and filter options to easily find specific tra
 - **React Native** - Frontend UI framework.
 - **Expo** - React Native framework for easy development.
 - **SQLite** - Local database storage.
-- **@react-native-picker/picker** - Dropdown picker component.
-- **@react-native-community/datetimepicker** - Date selection.
-- **react-native-chart-kit** - For generating financial graphs.
+
 ---
 
 
