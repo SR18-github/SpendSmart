@@ -20,7 +20,6 @@ existing entries and offer search and filter options to easily find specific tra
 
 - **Shreyas Ramji**
 - **Santhosh Ilaiyaraja**
-- **Eli Yuhan**
 ---
 
 
